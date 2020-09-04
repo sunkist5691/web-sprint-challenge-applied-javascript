@@ -54,23 +54,23 @@ axios
 
         //Append info to '.card-container' (for stretch goal: ADDED one more arguments to filter the specific cards)
         bootStrap.forEach( info => {
-            cardsContainer.appendChild(createArticle(info, 'bootstrap'))
+            cardsContainer.appendChild(CreateArticle(info, 'bootstrap'))
         })
 
         javascript.forEach( info => {
-            cardsContainer.appendChild(createArticle(info, 'javascript'))
+            cardsContainer.appendChild(CreateArticle(info, 'javascript'))
         })
 
         jquery.forEach( info => {
-            cardsContainer.appendChild(createArticle(info, 'jquery'))
+            cardsContainer.appendChild(CreateArticle(info, 'jquery'))
         })
 
         node.forEach( info => {
-            cardsContainer.appendChild(createArticle(info, 'node'))
+            cardsContainer.appendChild(CreateArticle(info, 'node'))
         })
 
         technology.forEach( info => {
-            cardsContainer.appendChild(createArticle(info, 'technology'))
+            cardsContainer.appendChild(CreateArticle(info, 'technology'))
         })
 
         const bs = Array.from(document.querySelectorAll('.bootstrap'))
@@ -84,7 +84,9 @@ axios
         const noJQ = bs.concat(js, nd, tn)
         const noND = bs.concat(js, jq, tn)
         const noTN = bs.concat(js, jq, nd)
+
         
+        // Filtering when we click 'topic tabs'
         document.addEventListener('click', e => {
             if(e.target.textContent === 'bootstrap'){
                 noBS.forEach(element => {
@@ -141,7 +143,7 @@ axios
 
 const cardsContainer = document.querySelector('.cards-container')
 
-function createArticle(data, addClass){
+function CreateArticle(data, addClass){ // Added one more arguments for stretch goal
 
     //Create Elements
     const cardInfo = document.createElement('div')

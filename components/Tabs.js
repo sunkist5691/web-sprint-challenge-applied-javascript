@@ -16,14 +16,14 @@ axios
     .get('https://lambda-times-api.herokuapp.com/topics')
     .then(response => {
         response.data.topics.forEach( eachTopic => {
-            topicContainer.appendChild(createTopics(eachTopic))
+            topicContainer.appendChild(CreateTopics(eachTopic))
         })
     })
     .catch(error => {
         console.log('ERROR: ', error)
     })
 
-function createTopics(data){ //(SPRINT: add one more argument)
+function CreateTopics(data){ //(SPRINT: add one more argument)
     
     // Create Element
     const topic = document.createElement('div')

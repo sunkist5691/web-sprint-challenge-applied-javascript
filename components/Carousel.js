@@ -23,7 +23,7 @@
   </div>
 */
 
-function carousel(){
+function Carousel(){
 
   //create elements
   const carouselContainer = document.createElement('div')
